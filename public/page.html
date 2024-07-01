@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SGA (Systeme de Gestion Agricol)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Systeme de Gestion Agricol</h1>
+        <nav>
+            <ul>
+                <li><a href="#riz">Rice</a></li>
+                <li><a href="#manioc">Cassava</a></li>
+                <li><a href="#mais">Maize</a></li>
+                <li><a href="#tomate">Tomato</a></li>
+                <li><a href="#haricot">Haricot</a></li>
+                <li><a href="#Statistiques">Statistiques</a></li>
+
+            </ul>
+        </nav>
+        <div class="reseaux-sociaux">
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jos%C3%A9-maurel-kouassi-152b39264/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Bienvenue sur le Systeme de Gestion Agricol</h2>
+            <p>Ce site vous permet de gérer et de visualiser les données agricoles de différentes cultures, <br>telles que le riz, le manioc, le maïs, les tomates et les haricots. <br>Cliquez sur les images ci-dessous pour voir les données spécifiques de chaque culture.</p>
+        </section>
+
+        <section class="produits">
+            <div class="produit">
+                <h2 id="riz">Rice</h2>
+                <img src="riz.webp" alt="Image de Riz">
+                <button onclick="handleClick('riz', '/riz')">View data on Rice</button>
+                <div id="riz-data"></div>
+            </div>
+
+            <div class="produit">
+                <h2 id="manioc">Cassava</h2>
+                <img src="manioc.jpg" alt="Image de Manioc">
+                <button onclick="handleClick('manioc', '/manioc')">View data on Cassava</button>
+                <div id="manioc-data"></div>
+            </div>
+
+            <div class="produit">
+                <h2 id="mais">Maize</h2>
+                <img src="maize.webp" alt="Image de Maïs">
+                <button onclick="handleClick('mais', '/mais')">View data on Maize</button>
+                <div id="mais-data"></div>
+            </div>
+
+            <div class="produit">
+                <h2 id="tomate">Tomato</h2>
+                <img src="tomato.jpg" alt="Image de Tomate">
+                <button onclick="handleClick('tomate', '/tomate')">View data on Tomato</button>
+                <div id="tomate-data"></div>
+            </div>
+
+            <div class="produit">
+                <h2 id="haricot">Bean</h2>
+                <img src="haricot.jpg" alt="Image de Haricot">
+                <button onclick="handleClick('haricot', '/haricot')">View data on Beans</button>
+                <div id="haricot-data"></div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <h2 id="Statistiques">Statistiques Évolutif</h2>
+            <canvas id="clickChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>Suivez-nous sur les réseaux sociaux :</p>
+        <div class="reseaux-sociaux">
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jos%C3%A9-maurel-kouassi-152b39264/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 - Systeme de Gestion Agricol (SGA)</p>
+        <p>by Maurel KOUASSI</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
